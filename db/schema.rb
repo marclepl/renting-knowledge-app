@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_11_13_145006) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
@@ -42,10 +45,5 @@ ActiveRecord::Schema.define(version: 2021_11_13_145006) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "bookings", "books"
-  add_foreign_key "bookings", "users"
-  add_foreign_key "books", "users"
 
 end
