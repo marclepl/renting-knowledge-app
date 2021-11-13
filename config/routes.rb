@@ -1,6 +1,5 @@
 #Creating the necessary routes for our mobile app (directing to different pages for the different functions)
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'pages#home'
 
   get "profile", to: "pages#profile"
