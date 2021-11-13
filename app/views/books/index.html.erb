@@ -1,0 +1,68 @@
+<div class="count">
+  <div style="margin-top: 10px; width: 90%; margin-left: 10px; margin-right: 10px; z-index: 1000; position: fixed; top: 10px;"class="searchbar-container">
+    <div class="new-searchbar">
+      <%= form_tag books_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search by title, author or city"
+        %>
+    </div>
+    <div>
+      <%= submit_tag "Search", class: "btn btn-flat" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+  <p class="book-count-text">Books matching your criteria: <%= @books.count%></p>
+<div class="container">
+  <ul class="cards">
+    <% @books.each do |book| %>
+      <li>
+        <a href="<%= book_path(book.id)%>" class="card">
+          <img src="<%= cl_image_path book.photo.key, height: 300, crop: :fill %>" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+              <% if book.user.photo.attached? %>
+                <img class="card__thumb" src="<%= cl_image_path book.user.photo.key, height: 300, crop: :fill %>" alt="" />
+              <% end %>
+              <div class="card__header-text">
+                <h3 class="card__title"><%=book.title %></h3>
+                <span class="card__status"><%=book.author %></span>
+              </div>
+            </div>
+            <p class="card__description"><%=book.description %></p>
+          </div>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<br>
+  <!--<div class="button-container">
+    <a class="button left-button" href="<%= root_path %>">Home</a>
+    <a class="button" href="<%= new_book_path %>">Share a book</a>
+    <a class="button right-button" href="#">Rented books</a>
+  </div>-->
+<div class="bottom-style">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <nav class="nav">
+    <a href="<%= root_path%>" class="nav__link">
+      <i class="fas fa-home" style="font-size: 20px"></i>
+      <span class="nav__text">Home</span>
+    </a>
+    <a href="<%= new_book_path %>" class="nav__link nav__link--active">
+      <i class="fas fa-rocket" style="font-size: 20px"></i>
+      <span class="nav__text">Share a book</span>
+    </a>
+    <a href="<%= books_path %>" class="nav__link">
+      <i class="fas fa-book" style="font-size: 20px"></i>
+      <span class="nav__text">All books</span>
+    </a>
+    <a href="<%= profile_path %>" class="nav__link">
+      <i class="fas fa-user"style="font-size: 20px"></i>
+      <span class="nav__text">Profile</span>
+    </a>
+  </nav>
+</div>

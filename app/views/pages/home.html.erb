@@ -1,0 +1,50 @@
+<div id="background-image">
+  <% if user_signed_in? %>
+      <a class="btn-ghost" data-method="delete" href="<%= destroy_user_session_path %>">Log out</a>
+  <% else %>
+      <a class="btn-ghost" href="<%= new_user_session_path %>">Log in</a>
+  <% end %>
+  <br>
+  <br>
+  <div id="home" class="container">
+    <h1 style="color: white;text-shadow: 2px 2px 2px #a9a9a9;">Welcome to Airbnbooks</h1>
+    <p style="color: white;text-shadow: 2px 2px 2px #a9a9a9; font-size: 18px;">Here you can share and rent books with people near you 🚀</p>
+    <br>
+    <br>
+    <div class="searchbar-container">
+      <div class ="new-searchbar">
+        <%= form_tag books_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search by title, author or city"
+          %>
+      </div>
+      <div>
+        <%= submit_tag "Search", class: "btn btn-flat" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-style">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <nav class="nav">
+      <a href="<%= root_path%>" class="nav__link">
+        <i class="fas fa-home" style="font-size: 20px"></i>
+        <span class="nav__text">Home</span>
+      </a>
+      <a href="<%= new_book_path %>" class="nav__link nav__link--active">
+        <i class="fas fa-rocket" style="font-size: 20px"></i>
+        <span class="nav__text">Share a book</span>
+      </a>
+      <a href="<%= books_path %>" class="nav__link">
+        <i class="fas fa-book" style="font-size: 20px"></i>
+        <span class="nav__text">All books</span>
+      </a>
+      <a href="<%= profile_path %>" class="nav__link">
+        <i class="fas fa-user"style="font-size: 20px"></i>
+        <span class="nav__text">Profile</span>
+      </a>
+    </nav>
+  </div>
+</div>

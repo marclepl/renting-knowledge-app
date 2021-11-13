@@ -1,0 +1,29 @@
+<div class="container">
+  <%= simple_form_for [ @book, @booking ], :html => { :class => 'form-vertical' } do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit "Submit", data: {confirm: "Thank you for your booking. Your book is booked! Enjoy your book!"} %>
+  <% end %>
+</div>
+
+<div class="bottom-style">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <nav class="nav">
+    <a href="<%= root_path%>" class="nav__link">
+      <i class="fas fa-home" style="font-size: 20px"></i>
+      <span class="nav__text">Home</span>
+    </a>
+    <a href="<%= new_book_path %>" class="nav__link nav__link--active">
+      <i class="fas fa-rocket" style="font-size: 20px"></i>
+      <span class="nav__text">Share a book</span>
+    </a>
+    <a href="<%= books_path %>" class="nav__link">
+      <i class="fas fa-book" style="font-size: 20px"></i>
+      <span class="nav__text">All books</span>
+    </a>
+    <a href="<%= profile_path %>" class="nav__link">
+      <i class="fas fa-user"style="font-size: 20px"></i>
+      <span class="nav__text">Profile</span>
+    </a>
+  </nav>
+</div>

@@ -1,0 +1,62 @@
+<div class="container">
+  <h1>My Bookings</h1>
+    <% @my_bookings.each do |booking| %>
+      <div class="card-product">
+        <img src="<%= cl_image_path booking.book.photo.key, height: 300, crop: :fill %>" alt="cover" />
+        <div class="card-product-infos">
+          <h5 class="card-title"><%= booking.book.title %></h5>
+          <h6 class="card-author"><%= booking.book.author %></h6>
+          <div class="dates-info">
+            <p class="index-card-details"> From <%= booking.start_date %></p>
+            <p class="index-card-details"> To <%= booking.end_date %></p>
+          </div>
+          <p class="index-card-details"> Please contact: <%= booking.book.user.username.downcase %>@gmail.com</p>
+        </div>
+      </div>
+    <% end %>
+</div>
+
+<div class="container">
+  <h1>My Books</h1>
+    <% @my_books.each do |book| %>
+      <a href="<%= book_path(book.id)%>" style="text-decoration: none; color: black">
+        <div class="card-product">
+          <img src="<%= cl_image_path book.photo.key, height: 300, crop: :fill %>" alt="cover" />
+          <div class="card-product-infos">
+            <h5 class="card-title"><%= book.title %></h5>
+            <h6 class="card-author"><%= book.author %></h6>
+            <p class="index-card-details"> <%= book.description %></p>
+          </div>
+          <div class="availability-status">
+            <% if book.bookings.where("start_date < ? AND end_date > ?", Date.tomorrow, Date.today).present? %>
+              <h2><i class="far fa-bookmark" style="color: red; font-size: 20px"></i></h2>
+            <% else %>
+              <h2><i class="fas fa-bookmark" style="color: green; font-size: 20px"></i></h2>
+            <% end %>
+          </div>
+        </div>
+      </a>
+    <% end %>
+</div>
+
+<div class="bottom-style">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <nav class="nav">
+    <a href="<%= root_path%>" class="nav__link">
+      <i class="fas fa-home" style="font-size: 20px"></i>
+      <span class="nav__text">Home</span>
+    </a>
+    <a href="<%= new_book_path %>" class="nav__link nav__link--active">
+      <i class="fas fa-rocket" style="font-size: 20px"></i>
+      <span class="nav__text">Share a book</span>
+    </a>
+    <a href="<%= books_path %>" class="nav__link">
+      <i class="fas fa-book" style="font-size: 20px"></i>
+      <span class="nav__text">All books</span>
+    </a>
+    <a href="<%= profile_path %>" class="nav__link">
+      <i class="fas fa-user"style="font-size: 20px"></i>
+      <span class="nav__text">Profile</span>
+    </a>
+  </nav>
+</div>

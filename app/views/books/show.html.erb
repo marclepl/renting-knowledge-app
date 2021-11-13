@@ -1,0 +1,73 @@
+<div class="container">
+<img class="image-show" src="<%= cl_image_path @book.photo.key, height: 300, crop: :fill %>" class="image-center"/>
+    <h2> <strong><%= @book.title %></strong></h2>
+    <p class="author"><%= @book.author %><p>
+<hr>
+  <p style="font-size: 18px; font-family: Nunito;"><strong>About this book:</strong></p>
+  <div class="line-height">
+    <p><%= @book.description %><p>
+  </div>
+  <div class="price_per_day">
+    <p>CHF <%=@book.price_per_day %><small class="price-style"> per day</small><p>
+  <p><i>listed by: </i><smal><%= @book.user.username %></small><p>
+<hr>
+  </div>
+    <% if current_user == @book.user %>
+      <a class="edit-button"><%= link_to "Edit Book", edit_book_path(@book.id) %></a>
+      <a class="delete-button"><%= link_to "Delete Book", book_path(@book.id), method: :delete, data: { confirm: "Are you sure?" } %></a>
+
+      <div class="container booking-table">
+  <h4 style="font-family: Nunito, Helvetica, sans-serif; ">My Book's Bookings</h4>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Dates</th>
+        <th scope="col">By</th>
+        <th scope="col">Income</th>
+      </tr>
+    </thead>
+  <tbody>
+    <% if @book.bookings.exists? %>
+      <% @book.bookings.each do |booking| %>
+        <tr>
+          <td><%= booking.start_date %><br>
+          <%= booking.end_date %></td>
+          <td><%= booking.user.username %></td>
+          <td>CHF <%= ((booking.end_date- booking.start_date) * @book.price_per_day).round %>.00</td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+  </table>
+    <p><strong>TOTAL GAINS: CHF <%= @sum %>.00</strong></p>
+</div>
+
+
+
+    <% elsif current_user != @book.user %>
+      <%= link_to "Book this book", new_book_booking_path(@book), class: 'btn btn-flat' %>
+    <% end %>
+ </div>
+ <br>
+<div class="bottom-style">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <nav class="nav">
+    <a href="<%= root_path%>" class="nav__link">
+      <i class="fas fa-home" style="font-size: 20px"></i>
+      <span class="nav__text">Home</span>
+    </a>
+    <a href="<%= new_book_path %>" class="nav__link nav__link--active">
+      <i class="fas fa-rocket" style="font-size: 20px"></i>
+      <span class="nav__text">Share a book</span>
+    </a>
+    <a href="<%= books_path %>" class="nav__link">
+      <i class="fas fa-book" style="font-size: 20px"></i>
+      <span class="nav__text">All books</span>
+    </a>
+    <a href="<%= profile_path %>" class="nav__link">
+      <i class="fas fa-user"style="font-size: 20px"></i>
+      <span class="nav__text">Profile</span>
+    </a>
+  </nav>
+</div>
