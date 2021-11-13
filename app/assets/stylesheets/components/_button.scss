@@ -1,0 +1,35 @@
+// button log-ghost
+
+.btn-ghost {
+  display: flex;
+  color: white;
+  // border: 1px solid #4A4A4A;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-weight: bold;
+  // opacity: 0.6;
+  font-size: 14px;
+  justify-content: right;
+  position: fixed;
+  text-shadow: 2px 2px 2px #a9a9a9;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}
+
+// button to use for the rest of the app
+
+.btn-flat {
+  color: white;
+  padding: 5.8px 24px;
+  border-radius: 4px;
+  background: #6320EE;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #6320EE;
+  color: white;
+}
+
