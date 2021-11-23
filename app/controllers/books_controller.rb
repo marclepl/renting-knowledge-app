@@ -3,16 +3,15 @@ class BooksController < ApplicationController
   #this function gives us the list of all the books if nothing is specified
   #OR if a search term is given, it will run the SQL query and will show us only the selected book
   def index
-    if params[:query].present?
-      sql_query = " \
-        books.title ILIKE :query \
-        OR books.author ILIKE :query \
-        OR users.city ILIKE :query \
-        "
-      @books = Book.joins(:user).where(sql_query, query: "%#{params[:query]}%")
-    else
-      @books = Book.all
-    end
+    # if params[:query].present?
+    #   sql_query = " \
+    #     books.title ILIKE :query \
+    #     OR books.author ILIKE :query \
+    #     OR users.city ILIKE :query \
+    #     "
+    #   @books = Book.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    #else
+    @books = Book.all
   end
 
   #this function shows us the details of a certain book when we click on it
