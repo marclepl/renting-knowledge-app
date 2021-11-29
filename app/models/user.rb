@@ -7,6 +7,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # include PgSearch::Model
-  # multisearchable against: [:city]
+  include PgSearch::Model
+  multisearchable against: [:city]
 end

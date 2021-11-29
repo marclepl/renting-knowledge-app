@@ -4,6 +4,6 @@ class Book < ApplicationRecord
   has_many :bookings
   has_one_attached :photo
 
-  # include PgSearch::Model
-  # multisearchable against: [:title, :author]
+  include PgSearch::Model
+  multisearchable against: [:title, :author]
 end
