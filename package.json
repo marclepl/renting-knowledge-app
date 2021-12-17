@@ -1,5 +1,5 @@
 {
-  "name": "renting_knowledge_app",
+  "name": "renting_knowledge_app", "engines": { "node": "14.15.0", },
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
