@@ -11,10 +11,12 @@
 
 
 # 1. Introduction <a name="introduction"></a>
+
 Renting Knowledge is a Ruby on Rails mobile app developed in the context of the Programming with Advanced Programming Languages course of Dr. Mario Silic offered at the University of St. Gallen during the Autumn semester 2021.
 This app aims at reducing the waste of used books by offering a platform for book lovers to rent and lend used books. In a first step, this platform allows users to list their used books with a certain price, picture and information. In a second step, users can rent books for a certain limited time and price from other users. In a last step, users can log into the platform to get an overview of who is in possession of their books at the moment and which books they have themselves rented.
 
-# 2. Group Members involved in the development of this app <a name="group"></a>
+# 2. Group members involved in the development of this app <a name="group"></a>
+
 - Marc L'Eplattenier (StormFace)
 - Elisa Roy (Eli2697)
 - Frederick Romano (FredRomano)
@@ -33,7 +35,8 @@ Ruby on Rails relies on The Model-View-Controller Pattern, which turns complex a
 Ruby on Rails relies on The Model-View-Controller Pattern, which turns complex application development into a much more manageable process through three interconnected layers. The Model is the backend that contains all the data logic, the View is the frontend or graphical user interface (GUI), whereas the Controller is the brains of the application that controls how data is displayed (Hernandez, 2021). As shown in the graph below (Geeks for Geeks, 2018), the user will use the Controller, which in turn manipulates the Model which updates the View to see the user.
 
 Some of the main advantages of using Ruby on Rails are that the framework is mature, which ensures stability that creates a hassle-free maintenance (Nowak, 2020).
- <img width="300" alt="image" src="https://user-images.githubusercontent.com/76914261/146533827-00df65cd-2694-4e04-afdb-1cd3f1f6eb62.png">
+
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/76914261/146533827-00df65cd-2694-4e04-afdb-1cd3f1f6eb62.png">
 
 Some of the main advantages of using Ruby on Rails are that the framework is mature, which ensures stability that creates a hassle-free maintenance. On the other hand, main issues have also been identified. A sometimes-slow performance and difficulty in scaling have been reported. In addition, a mature framework might become boring for coders, hence limiting the interest for the framework (Nowak, 2020).
 
@@ -52,7 +55,8 @@ Active Record is automatically generated with the generation of our Ruby on Rail
 
 Before we head into the separate folders, we want to signal that creating a Ruby on Rails app in the terminal automatically generates many different folders and files that are required for the well-functioning of the program, but that we have never touched or even opened. Thus, the following part will focus only on the folders and files, on which we have worked on.
 
-Before we head into more details on each folder, this schema wonderfully summarizes how a Ruby on Rails project is structured:
+This schema wonderfully summarizes how a Ruby on Rails project is structured:
+
 <img width="716" alt="image" src="https://user-images.githubusercontent.com/76914261/146337702-15701f82-dbcf-439a-9b55-d1eb443cd62a.png">
 
 ## The app folder
@@ -69,7 +73,7 @@ This folder is further composed of different important sub-folders:
 As its name says, the config folder is crucial, as it configures all components of the app, as well as the app itself. Diving too much into this folder is useless, as most of the files were created automatically, as we were progressing throughout the development of the app and the database. However, two sub-folders in particular are worth mentioning:
 - *Database.yml*: this file – written in yaml – sets the foundations for our database. We can see that we are using postgresql as our database adapter. Postgresql works better than other adapter such as SQLite when it comes to user management and more advanced apps. Postgresql is completely open source and offers much documentation if needed
 - *Routes*: this file is particularly important, as it serves as the main routing file for our app. The routing allows us to link our various urls (e.g. renting-knowledge/new) to the respective controller and model. It's in this file that these connections are made. If we were to add more pages and functionalities on the app, we would first have to create an additional route in this file.
-- 
+
 ## The db folder
 This folder contains everything linked to our database.
 - *Migrate*: this file contains all of our migrations to the database. When we run "rails db:migrate" in the terminal, it creates an additional migration, which saves our changes to the database. These migrations are stored there with the respective timestamp and name of file automatically generated.
@@ -80,14 +84,15 @@ This folder contains everything linked to our database.
 Finally, the last important file worth mentioning is the GemFile which contains all the gems that had to be installed to make the app work. Most of them were generated automatically when we created the Ruby on Rails app, while others had to be added manually, as we were adding functionalities to the app (e.g. the devise gem, the cloudinary gem, the pg search gem...). This file is then saved into the code when we run "bunde install" in the terminal.
 
 # 6. How to run the app? <a name="running"></a>
-**(disclaimer1: This is a MOBILE app, thus when accessing the website, please re-size your screen to 375x667 – the size of Iphones 6/7/8/9 to profit from the best design experience. You can do that on Firefox or Chrome by right-clicking, clicking on inspect, and changing the dimensions there)**
-**(disclaimer2: We have included a log-in system so that only logged in users can access the details of a certain book. Thus, please create an account / log-in before you start using the app to ensure that you will be able to use all functionalities! Otherwise, an error called "Undefined method books for nil" will appear)
+**Disclaimer 1: This is a MOBILE app, thus when accessing the website, please re-size your screen to 375x667 – the size of Iphones 6/7/8/9 to profit from the best design experience. You can do that on Firefox or Chrome by right-clicking, clicking on inspect, and changing the dimensions there**
 
-## EXTERNAL
+**Disclaimer 2: We have included a log-in system so that only logged in users can access the details of a certain book. Thus, please create an account / log-in before you start using the app to ensure that you will be able to use all functionalities! Otherwise, an error called "Undefined method books for nil" will appear**
+
+## External
 This mobile app is hosted on the cloud platform Heroku and can easily be accessed and used following this link:
 
-## RUNNING CODE ON OWN COMPUTER 
-**(disclaimer: Ruby on Rails needs to be installed on your computer. If it's not, follow the first steps of this tutorial: https://www.sitepoint.com/building-your-first-rails-application-models/)**
+## Running app locally on computer 
+**Disclaimer: Ruby on Rails needs to be installed on your computer. If it's not, follow the first steps of this tutorial: https://www.sitepoint.com/building-your-first-rails-application-models/**
 1. The ZIP file of this code can be downloaded from our GitHub page above
 2. From the terminal on your computer, move into the right folder where the ZIP file is by changing directories using the cd command
 3. Once the right file is selected, run "rake db:create:all" and "rake db:migrate" to create and migrate the database on your computer
@@ -95,7 +100,8 @@ This mobile app is hosted on the cloud platform Heroku and can easily be accesse
 
 # 7. How to navigate the app <a name="navigate"></a>
 As a guide to use the app, here are the various features available (please see part 7 "screenshots" for visual examples)
-**(disclaimer: This is a MOBILE app, thus when accessing the website, please re-size your screen to 375x667 – the size of Iphones 6/7/8/9 to profit from the best design experience. You can do that on Firefox or Chrome by right-clicking, clicking on inspect, and changing the dimensions there)**
+
+**Disclaimer: This is a MOBILE app, thus when accessing the website, please re-size your screen to 375x667 – the size of Iphones 6/7/8/9 to profit from the best design experience. You can do that on Firefox or Chrome by right-clicking, clicking on inspect, and changing the dimensions there**
 
 1. The homepage possesses a navigation bar allowing you to directly move to any page of your choosing. On the top left, you MUST LOG IN / CREATE AN ACCOUNT to be able to fully use the functionalities. You can also directly search for a certain book title, book author or user on the search bar
 2. Under "share a book", you can add your own listing with the book info and your preferred picture of the book which you can upload from your computer
@@ -104,24 +110,29 @@ As a guide to use the app, here are the various features available (please see p
 5. Finally, under profile, you have a summary of all your bookings AND a list of all of your books listed on the platform. Next to your books, you'll have a green bookmark logo if your book is available, and a red bookmark logo if your book is currently rented.
 
 # 8. Screenshots <a name="screenshots"></a>
+
 ### Welcome page with our search bar allowing for searches on title, author or keyword
 <img width="375" alt="image" src="https://user-images.githubusercontent.com/76914261/146349653-e7f52404-9833-442b-a68b-3b3c206cba45.png">
+
 ### Share your book!
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/76914261/146351584-adeaf4d7-ba96-4591-ae7e-81f1ccc7e394.png">
+
 ### View all listed books
 <img width="372" alt="image" src="https://user-images.githubusercontent.com/76914261/146351709-05089e21-dd46-4aae-953e-822533277426.png">
+
 ### Check your bookings and your books
 <img width="376" alt="image" src="https://user-images.githubusercontent.com/76914261/146351826-16e386cd-a8ea-4527-bf0b-0edb0d7eed7b.png">
+
 ### See details of the book you're interested in
 <img width="376" alt="image" src="https://user-images.githubusercontent.com/76914261/146351968-c9e29357-81a6-43ed-a7f3-e16e931858f3.png">
+
 ### Book the book you want with the dates you want it for!
+<img width="369" alt="image" src="https://user-images.githubusercontent.com/76914261/146352056-110404d1-3241-4c34-a9bc-b2da696e8d53.png">
 
- <img width="369" alt="image" src="https://user-images.githubusercontent.com/76914261/146352056-110404d1-3241-4c34-a9bc-b2da696e8d53.png">
+# 9. References <a name="references"></a>
 
- # 9. References <a name="references"></a>
-
- Geeks for Geeks. (2018). MVC Design Pattern. Retrieved from Geeks for Geeks: https://www.geeksforgeeks.org/mvc-design-pattern/
- Hernandez, R. D. (2021). The Model View Controller Pattern – MVC Architecture and Frameworks Explained . Retrieved from freeCodeCamp: https://www.freecodecamp.org/news/the-model-view-controller-pattern-mvc-architecture-and-frameworks-explained/
- Małek, P. (2020). Everything You Need to Know about Ruby on Rails Web Application Framework. Retrieved from railsware: https://railsware.com/blog/ruby-on-rails-guide/
- Nowak, M. (2020). Why Ruby on Rails Is Still a Good Choice in 2021 [UPDATED]. Retrieved from Monterail: https://www.monterail.com/blog/why-ruby-on-rails-development-2021
- Tutorials Point. (n.d.). Ruby on Rails - Introduction. Retrieved from Tutorials Point: https://www.tutorialspoint.com/ruby-on-rails/rails-introduction.htm
+Geeks for Geeks. (2018). MVC Design Pattern. Retrieved from Geeks for Geeks: https://www.geeksforgeeks.org/mvc-design-pattern/
+Hernandez, R. D. (2021). The Model View Controller Pattern – MVC Architecture and Frameworks Explained . Retrieved from freeCodeCamp: https://www.freecodecamp.org/news/the-model-view-controller-pattern-mvc-architecture-and-frameworks-explained/
+Małek, P. (2020). Everything You Need to Know about Ruby on Rails Web Application Framework. Retrieved from railsware: https://railsware.com/blog/ruby-on-rails-guide/
+Nowak, M. (2020). Why Ruby on Rails Is Still a Good Choice in 2021 [UPDATED]. Retrieved from Monterail: https://www.monterail.com/blog/why-ruby-on-rails-development-2021
+Tutorials Point. (n.d.). Ruby on Rails - Introduction. Retrieved from Tutorials Point: https://www.tutorialspoint.com/ruby-on-rails/rails-introduction.htm
