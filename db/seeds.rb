@@ -5,7 +5,7 @@
 require 'open-uri'
 Booking.destroy_all
 Book.destroy_all
-#User.destroy_all
+User.destroy_all
 
 p "Emptied"
 
