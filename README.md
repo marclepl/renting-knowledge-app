@@ -89,7 +89,9 @@ Finally, the last important file worth mentioning is the GemFile which contains 
 ## Easily run app on website (hosted on Heroku Cloud platform)
 This mobile app is hosted on the cloud platform Heroku and can easily be accessed and used following this link: https://renting-knowledge2021.herokuapp.com/
 
-## Running app locally on computer 
+**PLEASE SEE BOTH DISCLAIMERS ABOVE FOR THE IDEAL APP EXPERIENCE: 1. RESIZE TO MOBILE, 2. LOG-IN/SIGN-IN FIRST TO ACCESS EVERYTHING**
+
+## Running app locally on computer (not recommended, as much setup to do)
 **Disclaimer: Ruby on Rails needs to be installed on your computer. If it's not, follow the first steps of this tutorial: https://www.sitepoint.com/building-your-first-rails-application-models/**.
 1. The ZIP file of this code can be downloaded from our GitHub page above
 2. From the terminal on your computer, move into the right folder where the ZIP file is by changing directories using the cd command
