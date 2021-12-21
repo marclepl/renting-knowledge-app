@@ -34,8 +34,6 @@ While based on the Ruby coding language, Ruby on Rails interacts with other tool
 Ruby on Rails relies on The Model-View-Controller Pattern, which turns complex application development into a much more manageable process through three interconnected layers. The Model is the backend that contains all the data logic, the View is the frontend or graphical user interface (GUI), whereas the Controller is the brains of the application that controls how data is displayed (Hernandez, 2021).
 Ruby on Rails relies on The Model-View-Controller Pattern, which turns complex application development into a much more manageable process through three interconnected layers. The Model is the backend that contains all the data logic, the View is the frontend or graphical user interface (GUI), whereas the Controller is the brains of the application that controls how data is displayed (Hernandez, 2021). As shown in the graph below (Geeks for Geeks, 2018), the user will use the Controller, which in turn manipulates the Model which updates the View to see the user.
 
-Some of the main advantages of using Ruby on Rails are that the framework is mature, which ensures stability that creates a hassle-free maintenance (Nowak, 2020).
-
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/76914261/146533827-00df65cd-2694-4e04-afdb-1cd3f1f6eb62.png">
 
 Some of the main advantages of using Ruby on Rails are that the framework is mature, which ensures stability that creates a hassle-free maintenance. On the other hand, main issues have also been identified. A sometimes-slow performance and difficulty in scaling have been reported. In addition, a mature framework might become boring for coders, hence limiting the interest for the framework (Nowak, 2020).
@@ -66,7 +64,7 @@ This folder is further composed of different important sub-folders:
 - *Assets*: this folder contains all the code related to the CSS components neeeded for our front-end. The important folder there is "Stylesheets" in which we have listed the code for some of the style components that we use repeatedly in our code. This enables us to store the code in that file and be able to link back to it in our code
 - *Controllers*: this is one of the most important folder, as the Controllers are seen as the "brains" of our code. The controllers will make the links between the different other files. It's in these files that each of the actions we have available on our app are initiated. In our case, we have one controller per "model" that we use in our app, as well as a controller called pages_controller, which is the controller linked to the homepage.
 - *Javascript*: the little JavaScript that we have is initiated in these files, which are mostly automatically generated when we initiate the ruby on rails app in our terminal. This is where most of the JavaScript code would go if we had time to add more.
-- *Models*: the models relate to the various elements we have in our app. In our case, we have books, bookings and individual users who can log in to our app. Thus, these need to be "modeled" and especially linked to our database tables. This is the purpose of the models when using Active Record.
+- *Models*: the models relate to the various elements we have in our app. In our case, we have books, bookings and individual users who can log into our app. Thus, these need to be "modeled" and especially linked to our database tables. This is the purpose of the models when using Active Record.
 - *Views*: the views allow us to make the transition from the back-end to the front-end. They serve as the interface to the public and thus everything that is added there will affect what is displayed on our app. Different 'views' files need to be added for each function of each model. Typically these files are written in ERB (embedded ruby) which is HTML code with Ruby code embedded in it.
 
 ## The config folder
@@ -132,7 +130,11 @@ As a guide to use the app, here are the various features available (please see p
 # 9. References <a name="references"></a>
 
 Geeks for Geeks. (2018). MVC Design Pattern. Retrieved from Geeks for Geeks: https://www.geeksforgeeks.org/mvc-design-pattern/
+
 Hernandez, R. D. (2021). The Model View Controller Pattern – MVC Architecture and Frameworks Explained . Retrieved from freeCodeCamp: https://www.freecodecamp.org/news/the-model-view-controller-pattern-mvc-architecture-and-frameworks-explained/
+
 Małek, P. (2020). Everything You Need to Know about Ruby on Rails Web Application Framework. Retrieved from railsware: https://railsware.com/blog/ruby-on-rails-guide/
+
 Nowak, M. (2020). Why Ruby on Rails Is Still a Good Choice in 2021 [UPDATED]. Retrieved from Monterail: https://www.monterail.com/blog/why-ruby-on-rails-development-2021
+
 Tutorials Point. (n.d.). Ruby on Rails - Introduction. Retrieved from Tutorials Point: https://www.tutorialspoint.com/ruby-on-rails/rails-introduction.htm
