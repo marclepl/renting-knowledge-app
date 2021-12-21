@@ -60,7 +60,7 @@ book7 = Book.new(title: 'My Story', author: 'Greta Thunberg', description: "Don'
 book7.photo.attach(io: URI.open('https://m.media-amazon.com/images/I/418dtDASFLS.jpg'), filename: 'book4.png', content_type: 'image/jpg')
 book7.save!
 
-book8 = Book.new(title: 'Fifty Shades of Grey', author: 'E L James', description: "Heartwarming, a story for the whole family", price_per_day: 0.1, user: romain)
+book8 = Book.new(title: 'Fifty Shades of Grey', author: 'E L James', description: "Heartwarming, a story for the whole family", price_per_day: 0.1, user: donald)
 book8.photo.attach(io: URI.open('https://images-na.ssl-images-amazon.com/images/I/81xsanmYaWL.jpg'), filename: 'book5.png', content_type: 'image/jpg')
 book8.save!
 
