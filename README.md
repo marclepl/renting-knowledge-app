@@ -45,7 +45,7 @@ In order to cover the back-end, front-end and dynamic capabilities of the app, o
 We are creating a Ruby on Rails app using Active Record as a layer on top.
 
 As Ruby on Rails was explained above, here are a few lines about what Active Record is:
-Rails Active Record is an ORM (object/relational mapping) layer that comes with Rails. It runs between the database and our code. It allows us to automatically generated method names created from the field names of database tables. Each Active Record object uses the CRUD logic (Create, Read, Update, and Delete), and allows us to easily map between the database and our application.
+Rails Active Record is an ORM (object/relational mapping) layer that comes with Rails. It runs between the database and our code. It allows us to automatically generate method names created from the field names of database tables. Each Active Record object uses the CRUD logic (Create, Read, Update, and Delete), and allows us to easily map between the database and our application.
 
 Active Record is automatically generated with the generation of our Ruby on Rails app.
 
@@ -61,8 +61,8 @@ This schema wonderfully summarizes how a Ruby on Rails project is structured:
 The app folder contains all the code necessary to make the program work. This is where we spent the most time on, as this is the part where the back-end and the front-end are established.
 
 This folder is further composed of different important sub-folders:
-- *Assets*: this folder contains all the code related to the CSS components neeeded for our front-end. The important folder there is "Stylesheets" in which we have listed the code for some of the style components that we use repeatedly in our code. This enables us to store the code in that file and be able to link back to it in our code
-- *Controllers*: this is one of the most important folder, as the Controllers are seen as the "brains" of our code. The controllers will make the links between the different other files. It's in these files that each of the actions we have available on our app are initiated. In our case, we have one controller per "model" that we use in our app, as well as a controller called pages_controller, which is the controller linked to the homepage.
+- *Assets*: this folder contains all the code related to the CSS components needed for our front-end. The important folder there is "Stylesheets" in which we have listed the code for some of the style components that we use repeatedly in our code. This enables us to store the code in that file and be able to link back to it in our code
+- *Controllers*: this is one of the most important folder, as the Controllers are seen as the "brains" of our code. The controllers will make the links between the other different files. It's in these files that each of the actions we have available on our app are initiated. In our case, we have one controller per "model" that we use in our app, as well as a controller called pages_controller, which is the controller linked to the homepage.
 - *Javascript*: the little JavaScript that we have is initiated in these files, which are mostly automatically generated when we initiate the ruby on rails app in our terminal. This is where most of the JavaScript code would go if we had time to add more.
 - *Models*: the models relate to the various elements we have in our app. In our case, we have books, bookings and individual users who can log into our app. Thus, these need to be "modeled" and especially linked to our database tables. This is the purpose of the models when using Active Record.
 - *Views*: the views allow us to make the transition from the back-end to the front-end. They serve as the interface to the public and thus everything that is added there will affect what is displayed on our app. Different 'views' files need to be added for each function of each model. Typically these files are written in ERB (embedded ruby) which is HTML code with Ruby code embedded in it.
@@ -75,22 +75,22 @@ As its name says, the config folder is crucial, as it configures all components 
 ## The db folder
 This folder contains everything linked to our database.
 - *Migrate*: this file contains all of our migrations to the database. When we run "rails db:migrate" in the terminal, it creates an additional migration, which saves our changes to the database. These migrations are stored there with the respective timestamp and name of file automatically generated.
-- *Schema*: this file contains the whole schema of our database. This file is auto-generated when we migrate our changes to the database. It's very useful to check the connections between the elements of our app and discover any types of bugs that may arise. It alos gives us the type of each element in our app.
+- *Schema*: this file contains the whole schema of our database. This file is auto-generated when we migrate our changes to the database. It's very useful to check the connections between the elements of our app and discover any types of bugs that may arise. It also gives us the type of each element in our app.
 - *Seeds*: in this file we have created all our examples for the app. To populate an empty app with books, bookings, and users to showcase the functionality of this app, we had to manually add them to this file. This is generated when we run "rails db:seed" in the terminal.
 
 ## Other important file that is not a folder
 Finally, the last important file worth mentioning is the GemFile which contains all the gems that had to be installed to make the app work. Most of them were generated automatically when we created the Ruby on Rails app, while others had to be added manually, as we were adding functionalities to the app (e.g. the devise gem, the cloudinary gem, the pg search gem...). This file is then saved into the code when we run "bunde install" in the terminal.
 
 # 6. How to run the app? <a name="running"></a>
-**Disclaimer 1: This is a MOBILE app, thus when accessing the website, please re-size your screen to 375x667 – the size of Iphones 6/7/8/9 to profit from the best design experience. You can do that on Firefox or Chrome by right-clicking, clicking on inspect, and changing the dimensions there**
+**Disclaimer 1: This is a MOBILE app, thus when accessing the website, please re-size your screen to 375x667 – the size of Iphones 6/7/8/9 to profit from the best design experience. You can do that on Firefox or Chrome by right-clicking, clicking on inspect, and changing the dimensions there**.
 
-**Disclaimer 2: We have included a log-in system so that only logged in users can access the details of a certain book. Thus, please create an account / log-in before you start using the app to ensure that you will be able to use all functionalities! Otherwise, an error called "Undefined method books for nil" will appear**
+**Disclaimer 2: We have included a log-in system so that only logged in users can access the details of a certain book. Thus, please create an account / log-in before you start using the app to ensure that you will be able to use all functionalities! Otherwise, an error called "Undefined method books for nil" will appear**.
 
 ## External
 This mobile app is hosted on the cloud platform Heroku and can easily be accessed and used following this link:
 
 ## Running app locally on computer 
-**Disclaimer: Ruby on Rails needs to be installed on your computer. If it's not, follow the first steps of this tutorial: https://www.sitepoint.com/building-your-first-rails-application-models/**
+**Disclaimer: Ruby on Rails needs to be installed on your computer. If it's not, follow the first steps of this tutorial: https://www.sitepoint.com/building-your-first-rails-application-models/**.
 1. The ZIP file of this code can be downloaded from our GitHub page above
 2. From the terminal on your computer, move into the right folder where the ZIP file is by changing directories using the cd command
 3. Once the right file is selected, run "rake db:create:all" and "rake db:migrate" to create and migrate the database on your computer
@@ -101,9 +101,9 @@ As a guide to use the app, here are the various features available (please see p
 
 **Disclaimer: This is a MOBILE app, thus when accessing the website, please re-size your screen to 375x667 – the size of Iphones 6/7/8/9 to profit from the best design experience. You can do that on Firefox or Chrome by right-clicking, clicking on inspect, and changing the dimensions there**
 
-1. The homepage possesses a navigation bar allowing you to directly move to any page of your choosing. On the top left, you MUST LOG IN / CREATE AN ACCOUNT to be able to fully use the functionalities. You can also directly search for a certain book title, book author or user on the search bar
-2. Under "share a book", you can add your own listing with the book info and your preferred picture of the book which you can upload from your computer
-3. Under "all books", you can have a look at all the listings available on the platform and decide to click on the books that interest you to get more information (ONLY IF LOGGED IN)
+1. The homepage possesses a navigation bar allowing you to directly move to any page of your choosing. On the top left, you MUST LOG IN / CREATE AN ACCOUNT to be able to fully use the functionalities. You can also directly search for a certain book title, book author or user on the search bar.
+2. Under "share a book", you can add your own listing with the book info and your preferred picture of the book which you can upload from your computer.
+3. Under "all books", you can have a look at all the listings available on the platform and decide to click on the books that interest you to get more information (ONLY IF LOGGED IN).
 4. In the details of a specific book, you can "book the book" for a certain timeframe. Once you book the book, it creates a new booking for you so that you can follow your order and know when to return it. Also, it gives you the email address of the person you need to contact to get in touch.
 5. Finally, under profile, you have a summary of all your bookings AND a list of all of your books listed on the platform. Next to your books, you'll have a green bookmark logo if your book is available, and a red bookmark logo if your book is currently rented.
 
