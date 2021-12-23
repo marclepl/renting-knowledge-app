@@ -105,9 +105,10 @@ As a guide to use the app, here are the various features available (please see p
 
 1. The homepage possesses a navigation bar allowing you to directly move to any page of your choosing. On the top left, you MUST LOG IN / CREATE AN ACCOUNT to be able to fully use the functionalities. You can also directly search for a certain book title, book author or user on the search bar.
 2. Under "share a book", you can add your own listing with the book info and your preferred picture of the book which you can upload from your computer.
-3. Under "all books", you can have a look at all the listings available on the platform and decide to click on the books that interest you to get more information (ONLY IF LOGGED IN).
-4. In the details of a specific book, you can "book the book" for a certain timeframe. Once you book the book, it creates a new booking for you so that you can follow your order and know when to return it. Also, it gives you the email address of the person you need to contact to get in touch.
-5. Finally, under profile, you have a summary of all your bookings AND a list of all of your books listed on the platform. Next to your books, you'll have a green bookmark logo if your book is available, and a red bookmark logo if your book is currently rented.
+3. After having uploaded your book and at any time, you can edit/delete your book by going into your own book. Additionally, at the bottom of your own book, you can see how much money you have made with renting your book
+4. Under "all books", you can have a look at all the listings available on the platform and decide to click on the books that interest you to get more information (ONLY IF LOGGED IN).
+5. In the details of a specific book, you can "book the book" for a certain timeframe. Once you book the book, it creates a new booking for you so that you can follow your order and know when to return it. Also, it gives you the email address of the person you need to contact to get in touch.
+6. Finally, under profile, you have a summary of all your bookings AND a list of all of your books listed on the platform. Next to your books, you'll have a green bookmark logo if your book is available, and a red bookmark logo if your book is currently rented.
 
 # 8. Screenshots <a name="screenshots"></a>
 
